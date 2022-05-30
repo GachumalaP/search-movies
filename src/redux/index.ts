@@ -1,0 +1,1 @@
+export { movieReducer } from "./reducers/movie-reducer";

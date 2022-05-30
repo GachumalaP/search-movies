@@ -1,4 +1,4 @@
-export type TSearchMovieByTitleResponse = {
+export type TMovie = {
   Title: string;
   Year: string;
   imdbId: string;
