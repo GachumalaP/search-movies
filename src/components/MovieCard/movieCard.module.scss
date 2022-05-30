@@ -1,0 +1,37 @@
+.movie-card{
+    height: "475px";
+    .movie-card-img{
+        border-bottom: 1px solid black;
+        height: 350px;
+        object-fit: fill;
+    }
+    .movie-card-body{
+        .movie-card-title{
+            font-size: 14px;
+            text-align: left;
+            .card-label-visible{
+                float: right;
+                font-size: 12px;
+                visibility: visible;
+            }
+            .card-label-hide{
+                visibility: hidden;
+            }
+        }
+        .movie-card-release-year{
+            span{
+                float: left;
+            }
+            text-align: right;
+        }
+    }
+
+    .movie-card-button{
+        border: none;
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+        width: 150px;
+        margin: 5px 0;
+    }
+}

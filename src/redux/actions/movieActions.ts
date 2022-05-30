@@ -1,4 +1,3 @@
-import { AppDispatch } from "../../store";
 import { searchMovies, TMovie } from "../../utils";
 
 export const FETCH_MOVIES_REQUEST = 'FETCH_MOVIES_REQUEST';
@@ -16,7 +15,7 @@ export const fetchMoviesSuccess = (movies: TMovie[]) => {
 }
 
 export const FETCH_MOVIES_ERROR = 'FETCH_MOVIES_ERROR';
-export const fetchMoviesError = (error: any) => {
+export const fetchMoviesError = (error) => {
     return{
         type: FETCH_MOVIES_ERROR,
         payload: error
@@ -24,7 +23,7 @@ export const fetchMoviesError = (error: any) => {
 }
 
 export const fetchMoviesBySearchValue= (searchValue: string) => {
-    return async (dispatch: AppDispatch) => {
+    return async (dispatch) => {
         dispatch(fetchMoviesRequest());
         try{
             const response = await searchMovies(searchValue);

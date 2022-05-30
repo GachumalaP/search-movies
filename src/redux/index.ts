@@ -1,1 +1,1 @@
-export { movieReducer } from "./reducers/movie-reducer";
+export { movieReducer } from "./reducers/movieReducer";

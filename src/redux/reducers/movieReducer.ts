@@ -1,5 +1,4 @@
-// import { TMovie } from "../../utils/omdb-api";
-import { FETCH_MOVIES_ERROR, FETCH_MOVIES_REQUEST, FETCH_MOVIES_SUCCESS } from "../actions/movie-actions";
+import { FETCH_MOVIES_ERROR, FETCH_MOVIES_REQUEST, FETCH_MOVIES_SUCCESS } from "../actions/movieActions";
 import { TMoviesStore } from "../types/movie-types";
 
 const initialState: TMoviesStore = {
@@ -8,7 +7,7 @@ const initialState: TMoviesStore = {
     error:''
 }
 
-export const movieReducer = (state=initialState, action: any) => {
+export const movieReducer = (state=initialState, action) => {
     switch(action.type){
         case FETCH_MOVIES_REQUEST: return {
             ...state,

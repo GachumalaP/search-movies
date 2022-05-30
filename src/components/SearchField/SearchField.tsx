@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDebounce, useAppDispatch } from "../../hooks";
-import { fetchMoviesBySearchValue } from "../../redux/actions/movie-actions";
-import styles from "./search-field.module.scss";
+import { fetchMoviesBySearchValue } from "../../redux/actions/movieActions";
+import styles from "./searchField.module.scss";
 
 export const SearchField: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -11,7 +11,7 @@ export const SearchField: React.FC = () => {
 
   useEffect(() => {
     if (debouncedSearchTerm) {
-      dispatch(fetchMoviesBySearchValue(debouncedSearchTerm));
+      dispatch(fetchMoviesBySearchValue(debouncedSearchTerm.trim()));
     }
   }, [debouncedSearchTerm]);
 
@@ -19,8 +19,8 @@ export const SearchField: React.FC = () => {
     <input
       className={styles["search-field"]}
       type="text"
-      onChange={(e) => { setSearchValue(e.target.value); }}
       placeholder="search movies"
+      onChange={(e) => setSearchValue(e.target.value)}
     />
   );
 };
